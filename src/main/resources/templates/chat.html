@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat WebSocket</title>
+    <script src="js/sockjs-0.3.4.js"></script>
+    <script src="js/stomp.js"></script>
+    <script type="text/javascript">
+            var stompClient = null;
+            var userName = null;
+            var sessionId = null;
+
+            function setConnected(connected) {
+                document.getElementById('connect').disabled = connected;
+                document.getElementById('disconnect').disabled = !connected;
+                document.getElementById('conversationDiv').style.visibility = connected ? 'visible' : 'hidden';
+                document.getElementById('response').innerHTML = '';
+
+                document.getElementById('from').disabled = connected;
+            }
+
+            function connect() {
+                var socket = new SockJS('/chatroom');
+                stompClient = Stomp.over(socket);
+
+                userName = document.getElementById('from').value;
+                stompClient.connect({user:userName}, function(frame) {
+                    setConnected(true);
+                    console.log('Connected: ' + frame);
+
+                    // 廣播
+                    stompClient.subscribe('/topic/messages', function(messageOutput) {
+                        showMessageOutput(JSON.parse(messageOutput.body));
+                    });
+
+                    // 私人
+                    stompClient.subscribe('/user/subscribe', function(messageOutput) {
+                    showMessageOutput(JSON.parse(messageOutput.body));
+                    });
+
+                });
+
+            }
+
+            function disconnect() {
+                if(stompClient != null) {
+                    stompClient.disconnect();
+                }
+                setConnected(false);
+                userName = null;
+                console.log("Disconnected");
+            }
+
+            function sendMessage() {
+                var from = document.getElementById('from').value;
+                var text = document.getElementById('text').value;
+                if(text != ''){
+                    stompClient.send("/app/chat", {}, JSON.stringify({'from':from, 'text':text}));
+                    document.getElementById('text').value = '';
+                }
+            }
+
+            function showMessageOutput(messageOutput) {
+                var response = document.getElementById('response');
+                var p = document.createElement('p');
+                p.style.wordWrap = 'break-word';
+                p.appendChild(document.createTextNode(" (" + messageOutput.dateStr + ")" + messageOutput.message.from + ":      "+
+                messageOutput.message.text));
+                response.appendChild(p);
+
+                var elem = document.getElementById('scroll');
+                elem.scrollTop = elem.scrollHeight;
+            }
+
+    </script>
+    <style>
+        @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+        *{
+            font-family:'cwTeXYen', Comic Sans MS;
+        }
+        body{
+            font-family: 'Jacques Francois Shadow';
+            background-image: linear-gradient(to top,  #6D7B86, #BFCDD4);
+        }
+        #from, #text{
+            width: 200px;
+            height: 25px;
+            margin: 10px;
+            color: #336666;
+            text-align: center;
+        }
+        #connect, #disconnect{
+            position: relative;
+            bottom: 0;
+            width: 7%;
+            height: 30px;
+            border: groove;
+            background-image: linear-gradient(to bottom,  #6D7B86, #BFCDD4);
+            font-family: "Open Sans", sans-serif;
+            text-align: center;
+            font-size: 10px;
+            text-transform: capitalize;
+            color: #fff;
+            z-index: 3;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -ms-border-radius: 4px;
+            -o-border-radius: 4px;
+            border-radius: 4px;
+            -webkit-transition: 0.3s;
+            -moz-transition: 0.3s;
+            -ms-transition: 0.3s;
+            -o-transition: 0.3s;
+            transition: 0.3s;
+        }
+        #sendMessage{
+            position: relative;
+            bottom: 0;
+            width: 5%;
+            height: 25px;
+            border: groove;
+            background-image: linear-gradient(to bottom,  #6D7B86, #BFCDD4);
+            font-family: "Open Sans", sans-serif;
+            text-align: center;
+            font-size: 10px;
+            text-transform: capitalize;
+            color: #fff;
+            z-index: 3;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -ms-border-radius: 4px;
+            -o-border-radius: 4px;
+            border-radius: 4px;
+            -webkit-transition: 0.3s;
+            -moz-transition: 0.3s;
+            -ms-transition: 0.3s;
+            -o-transition: 0.3s;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body onload="disconnect()">
+<div>
+    <div>
+        <input type="text" id="from" placeholder="Choose a nickname"/>
+    </div>
+    <br/>
+    <div>
+        <button id="connect" onclick="connect();">Connect</button>
+        <button id="disconnect" disabled="disabled" onclick="disconnect();">Disconnect</button>
+    </div>
+    <br/>
+    <div id="conversationDiv">
+        <input type="text" id="text" placeholder="Write a message..."/>
+        <button id="sendMessage" onclick="sendMessage();">Send</button>
+    </div>
+    <div id = "scroll" style="height:600px;width:500px;border:1px;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
+        <p id="response"></p>
+    </div>
+</div>
+
+</body>
+</html>

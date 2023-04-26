@@ -1,0 +1,56 @@
+2023-04-26:16:23:20.166 [INFO] [main] IUA.version1.ChatroomV1Appication - Starting ChatroomV1Appication on LAPTOP-Victoria2smile with PID 13604 (started by cody9 in C:\Users\cody9\OneDrive\桌面\專題\ChatroomV1)
+2023-04-26:16:23:20.191 [INFO] [main] IUA.version1.ChatroomV1Appication - No active profile set, falling back to default profiles: default
+2023-04-26:16:23:22.963 [INFO] [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-04-26:16:23:22.989 [INFO] [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-26:16:23:23.000 [INFO] [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-04-26:16:23:23.000 [INFO] [main] o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2023-04-26:16:23:23.015 [INFO] [main] o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Users\cody9\.jdks\openjdk-18.0.1.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Perl64\site\bin;C:\Perl64\bin;C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Program Files\Java\jdk-17.0.2\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files (x86)\dotnet\;C:\Program Files (x86)\Microchip\MPLAB C32 Suite\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\cody9\AppData\Local\Microsoft\WindowsApps;C:\Users\cody9\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\cody9\.dotnet\tools;C:\altera\13.1\modelsim_ase\win32aloem;C:\Program Files\MongoDB\Server\5.0\bin;;C:\altera\13.1\QuartusWeb\modelsim_ase\win32aloem;C:\Users\cody9\AppData\Roaming\npm;.]
+2023-04-26:16:23:23.239 [INFO] [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-04-26:16:23:23.243 [INFO] [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2915 ms
+2023-04-26:16:23:23.295 [INFO] [main] o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2023-04-26:16:23:23.300 [INFO] [main] o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2023-04-26:16:23:23.301 [INFO] [main] o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2023-04-26:16:23:23.301 [INFO] [main] o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2023-04-26:16:23:23.301 [INFO] [main] o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2023-04-26:16:23:23.591 [INFO] [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientInboundChannelExecutor'
+2023-04-26:16:23:23.605 [INFO] [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'clientOutboundChannelExecutor'
+2023-04-26:16:23:23.636 [INFO] [main] o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'messageBrokerTaskScheduler'
+2023-04-26:16:23:23.699 [INFO] [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'brokerChannelExecutor'
+2023-04-26:16:23:24.383 [INFO] [main] o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2023-04-26:16:23:24.385 [INFO] [main] o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2023-04-26:16:23:24.392 [INFO] [main] o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2023-04-26:16:23:24.405 [INFO] [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-04-26:16:23:24.433 [INFO] [main] o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2023-04-26:16:23:24.465 [INFO] [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-26:16:23:24.471 [INFO] [main] IUA.version1.ChatroomV1Appication - Started ChatroomV1Appication in 4.948 seconds (JVM running for 6.621)
+2023-04-26:16:24:23.721 [INFO] [MessageBroker-1] o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannelpool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2023-04-26:16:25:41.924 [INFO] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-26:16:25:41.928 [INFO] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-04-26:16:25:41.950 [INFO] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 16 ms
+2023-04-26:16:26:04.699 [INFO] [http-nio-8080-exec-3] IUA.version1.Ws.ConnectEventListener - user login, user:sy, sessionId:qf7zhe3o
+2023-04-26:16:26:04.699 [INFO] [http-nio-8080-exec-3] IUA.version1.Ws.ConnectEventListener - [WebSocketSessions] sessionUsers: 1
+2023-04-26:16:26:18.848 [INFO] [http-nio-8080-exec-2] IUA.version1.Ws.ConnectEventListener - user login, user:pp, sessionId:jo9163a3
+2023-04-26:16:26:18.848 [INFO] [http-nio-8080-exec-2] IUA.version1.Ws.ConnectEventListener - [WebSocketSessions] sessionUsers: 2
+2023-04-26:16:26:50.819 [INFO] [http-nio-8080-exec-8] IUA.version1.Ws.ConnectEventListener - user login, user:cc, sessionId:jvk9lv7n
+2023-04-26:16:26:50.820 [INFO] [http-nio-8080-exec-8] IUA.version1.Ws.ConnectEventListener - [WebSocketSessions] sessionUsers: 3
+2023-04-26:16:26:57.388 [INFO] [http-nio-8080-exec-8] IUA.version1.Ws.ConnectEventListener - user login, user:v, sessionId:nnrb2ozv
+2023-04-26:16:26:57.392 [INFO] [http-nio-8080-exec-8] IUA.version1.Ws.ConnectEventListener - [WebSocketSessions] sessionUsers: 4
+2023-04-26:16:27:05.277 [INFO] [http-nio-8080-exec-4] IUA.version1.Ws.ConnectEventListener - user login, user:IUA, sessionId:qqtimfq1
+2023-04-26:16:27:05.278 [INFO] [http-nio-8080-exec-4] IUA.version1.Ws.ConnectEventListener - [WebSocketSessions] sessionUsers: 5
+2023-04-26:16:29:04.422 [INFO] [http-nio-8080-exec-3] I.v.Ws.DisconnectEventListener - user logout, sessionId:jo9163a3
+2023-04-26:16:29:04.422 [INFO] [http-nio-8080-exec-3] I.v.Ws.DisconnectEventListener - [WebSocketSessions] sessionUsers: 4
+2023-04-26:16:29:34.194 [INFO] [http-nio-8080-exec-7] I.v.Ws.DisconnectEventListener - user logout, sessionId:qf7zhe3o
+2023-04-26:16:29:34.195 [INFO] [http-nio-8080-exec-7] I.v.Ws.DisconnectEventListener - [WebSocketSessions] sessionUsers: 3
+2023-04-26:16:29:41.156 [INFO] [http-nio-8080-exec-6] I.v.Ws.DisconnectEventListener - user logout, sessionId:qqtimfq1
+2023-04-26:16:29:41.158 [INFO] [http-nio-8080-exec-6] I.v.Ws.DisconnectEventListener - [WebSocketSessions] sessionUsers: 2
+2023-04-26:16:31:02.487 [INFO] [http-nio-8080-exec-8] I.v.Ws.DisconnectEventListener - user logout, sessionId:jvk9lv7n
+2023-04-26:16:31:02.487 [INFO] [http-nio-8080-exec-8] I.v.Ws.DisconnectEventListener - [WebSocketSessions] sessionUsers: 1
+2023-04-26:16:43:15.080 [INFO] [Thread-2] I.v.Ws.DisconnectEventListener - user logout, sessionId:nnrb2ozv
+2023-04-26:16:43:15.081 [INFO] [Thread-2] I.v.Ws.DisconnectEventListener - [WebSocketSessions] sessionUsers: 0
+2023-04-26:16:43:15.082 [INFO] [Thread-2] o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2023-04-26:16:43:15.082 [INFO] [Thread-2] o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2023-04-26:16:43:15.083 [INFO] [Thread-2] o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2023-04-26:16:43:15.085 [INFO] [Thread-2] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'brokerChannelExecutor'
+2023-04-26:16:43:15.086 [INFO] [Thread-2] o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'messageBrokerTaskScheduler'
+2023-04-26:16:43:15.087 [INFO] [Thread-2] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientOutboundChannelExecutor'
+2023-04-26:16:43:15.087 [INFO] [Thread-2] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'clientInboundChannelExecutor'
